@@ -306,7 +306,7 @@ class GoogleMapPlacePicker extends StatelessWidget {
       leftPosition: MediaQuery.of(context).size.width * 0.025,
       rightPosition: MediaQuery.of(context).size.width * 0.025,
       width: MediaQuery.of(context).size.width * 0.9,
-      borderRadius: BorderRadius.circular(12.0),
+      borderRadius: BorderRadius.circular(8.0),
       elevation: 4.0,
       color: const Color.fromRGBO(22, 35, 58, 1.0),
       child: state == SearchingState.Searching
@@ -335,7 +335,7 @@ class GoogleMapPlacePicker extends StatelessWidget {
         children: <Widget>[
           Text(
             result.name,
-            style: TextStyle(fontSize: 18),
+            style: TextStyle(fontSize: 18,fontWeight: FontWeight.bold),
             textAlign: TextAlign.center,
           ),
           SizedBox(height: 5),
