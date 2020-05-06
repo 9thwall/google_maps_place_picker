@@ -346,7 +346,7 @@ class GoogleMapPlacePicker extends StatelessWidget {
               padding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
               child: Text(
                 "SELECT THIS LOCATION",
-                style: TextStyle(fontSize: 16),
+                style: TextStyle(fontSize: 16,color: const Color.fromRGBO(22, 35, 58, 1.0)),
               ),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(4.0),
