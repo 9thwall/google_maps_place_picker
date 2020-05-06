@@ -334,23 +334,27 @@ class GoogleMapPlacePicker extends StatelessWidget {
       child: Column(
         children: <Widget>[
           Text(
-            result.formattedAddress,
+            result.name,
             style: TextStyle(fontSize: 18),
             textAlign: TextAlign.center,
           ),
           SizedBox(height: 10),
-          RaisedButton(
-            padding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
-            child: Text(
-              "Select here",
-              style: TextStyle(fontSize: 16),
+          Container(
+            width: double.infinity,
+            child: RaisedButton(
+              color: const Color.fromRGBO(209, 200, 180, 1.0),
+              padding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+              child: Text(
+                "SELECT THIS LOCATION",
+                style: TextStyle(fontSize: 16),
+              ),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(4.0),
+              ),
+              onPressed: () {
+                onPlacePicked(result);
+              },
             ),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(4.0),
-            ),
-            onPressed: () {
-              onPlacePicked(result);
-            },
           ),
         ],
       ),
